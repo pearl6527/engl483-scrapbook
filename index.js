@@ -3,14 +3,15 @@ const min = 2;
 
 const max1 = 0.5;
 const min1 = 0.05;
-// window.onload = startDisplay();
+
 var displayOn = false;
 
 function startDisplay() {
   let boxes = document.getElementsByClassName("box");
   for (const box of boxes) {
     updateDisplay(box);
-  }  
+  }
+  updateTitle();
 }
 function updateDisplay(elem) {
 
@@ -35,6 +36,19 @@ function updateDisplay(elem) {
   let randTime = generateRandTime(long);
   if (displayOn) {
     setTimeout(updateDisplay, randTime, elem);
+  }
+}
+
+function updateTitle() {
+  let newTitle = "";
+  const items = CORR["title"];
+  for (const item of items) {
+    let randIdx = Math.floor(Math.random() * item.list.length);
+    newTitle += item.list[randIdx] + " ";
+  }
+  document.title = newTitle;
+  if (displayOn) {
+    setTimeout(updateTitle, generateRandTime(false));
   }
 }
 

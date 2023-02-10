@@ -16,6 +16,8 @@
         displayOn = !displayOn;
         if (displayOn) {
           startDisplay();
+        } else {
+          setTimeout(() => {document.title = "Poem Torn Apart";}, 4000);
         }
       }
     </script>
