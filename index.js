@@ -1,8 +1,8 @@
 const max = 4;
-const min = 2;
+const min = 2.5;
 
 const max1 = 0.5;
-const min1 = 0.05;
+const min1 = 0.01;
 
 var displayOn = false;
 
@@ -47,6 +47,7 @@ function updateTitle() {
     newTitle += item.list[randIdx] + " ";
   }
   document.title = newTitle;
+  // document.getElementById("poemTitle").innerHTML = newTitle;
   if (displayOn) {
     setTimeout(updateTitle, generateRandTime(false));
   }
