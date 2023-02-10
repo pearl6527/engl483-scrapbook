@@ -6,4 +6,16 @@
 p {
   font-family: 'Times New Roman', Times, serif;
   line-height: 17pt;
+  user-select: none;
 }
+
+::selection {
+  color: #000;
+  background-color: #dedede;
+}
+
+.redacted::selection {
+  background-color: #bbb;
+  color: #bbbbb1;
+}
+
