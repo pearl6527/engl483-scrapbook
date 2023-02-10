@@ -9,39 +9,52 @@
     <script type="text/javascript" src="correspondences.js"></script>
   </head>
   <body>
+    <script type="text/javascript">
+      function startButton() {
+        const b = document.getElementById("startButton");
+        b.innerHTML = b.innerHTML === "start" ? "stop" : "start";
+        displayOn = !displayOn;
+        if (displayOn) {
+          startDisplay();
+        }
+      }
+    </script>
+    <button class="button" onclick="startButton()" id="startButton">start</button>
+    <div id="poemText">
+      <p>
+        the night sky took 
+        <span id="1-1-0" class="box redacted">the</span> 
+        <span id="1-1-1" class="box redacted">sunset</span> 
+        <span id="1-1-2" class="box"></span>
+        <span id="1-1-3" class="box redacted">up</span> 
+        <span id="1-1-4" class="box redacted">into</span> 
+        <span id="1-1-5" class="box redacted">bed</span> 
+        <span id="1-1-6" class="box"></span> <br/>
+        black is this instant 
+        <span id="1-2-0" class="box redacted">the</span> 
+        <span id="1-2-1" class="box redacted">only</span> 
+        <span id="1-2-2" class="box"></span>
+        <span id="1-2-3" class="box redacted">sound</span> 
+        <span id="1-2-4" class="box redacted">remaining</span> <br/>
+        the stars too 
+        <span id="1-3-0" class="box redacted">have</span> 
+        <span id="1-3-1" class="box redacted">covered</span> 
+        <span id="1-3-2" class="box redacted">their</span> 
+        <span id="1-3-3" class="box redacted">eyes</span> <br/>
+        left to the wind 
+        <span id="1-4-0" class="box redacted">rain</span> 
+        <span id="1-4-1" class="box redacted">beating</span> 
+        <span id="1-4-2" class="box redacted">down</span> 
+        <span id="1-4-3" class="box redacted">not</span> 
+        <span id="1-4-4" class="box redacted">yet</span> 
+        <span id="1-4-5" class="box redacted">here</span> <br/>
+        daybreak 
+        <span id="1-5-0" class="box redacted">its</span> 
+        <span id="1-5-1" class="box redacted">wide</span> 
+        <span id="1-5-2" class="box redacted">gates</span> <br/>
+      </p>
+    </div>
     
-    <p>
-      the night sky took 
-      <span id="1-1-0" class="box">the</span> 
-      <span id="1-1-1" class="box">sunset</span> 
-      <span id="1-1-2" class="box"></span> 
-      <span id="1-1-3" class="box">up</span> 
-      <span id="1-1-4" class="box">into</span> 
-      <span id="1-1-5" class="box">bed</span> 
-      <span id="1-1-6" class="box"></span> <br/>
-      black is this instant 
-      <span id="1-2-0" class="box">the</span> 
-      <span id="1-2-1" class="box">only</span> 
-      <span id="1-2-2" class="box"></span> 
-      <span id="1-2-3" class="box">sound</span> 
-      <span id="1-2-4" class="box">remaining</span> <br/>
-      the stars too 
-      <span id="1-3-0" class="box">have</span> 
-      <span id="1-3-1" class="box">covered</span> 
-      <span id="1-3-2" class="box">their</span> 
-      <span id="1-3-3" class="box">eyes</span> <br/>
-      left to the wind 
-      <span id="1-4-0" class="box">rain</span> 
-      <span id="1-4-1" class="box">beating</span> 
-      <span id="1-4-2" class="box">down</span> 
-      <span id="1-4-3" class="box">not</span> 
-      <span id="1-4-4" class="box">yet</span> 
-      <span id="1-4-5" class="box">here</span> <br/>
-      daybreak 
-      <span id="1-5-0" class="box">its</span> 
-      <span id="1-5-1" class="box">wide</span> 
-      <span id="1-5-2" class="box">gates</span> <br/>
-    </p>
 
     <script type="text/javascript" src="index.js"></script>
 

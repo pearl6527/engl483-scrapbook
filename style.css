@@ -19,3 +19,18 @@ p {
   color: #bbbbb1;
 }
 
+.button {
+  background-color: #555555;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  margin: 4px 2px;
+  width: fit-content;
+  height: 20pt;
+  cursor: pointer;
+  font-size: 13pt;
+  font-family: 'Courier New', Courier, monospace;
+}
+

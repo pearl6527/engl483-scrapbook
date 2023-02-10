@@ -1,11 +1,10 @@
-
 const max = 4;
 const min = 2;
 
 const max1 = 0.5;
 const min1 = 0.05;
-window.onload = startDisplay();
-
+// window.onload = startDisplay();
+var displayOn = false;
 
 function startDisplay() {
   let boxes = document.getElementsByClassName("box");
@@ -14,10 +13,15 @@ function startDisplay() {
   }  
 }
 function updateDisplay(elem) {
-  // var elem = document.getElementById(id);
+
   const indices = elem.id.split("-");
   const item = CORR[indices[0]][indices[1]][indices[2]];
   // console.log(item);
+  // if (elem.innerHTML === item.word && Math.random() < 0.5) {
+  //   setTimeout(updateDisplay, generateRandTime(true), elem);
+  //   return;
+  // }
+
   let randIdx = Math.floor(Math.random() * item.list.length);
   let long = false;
   if (item.list[randIdx] === item.word) {
@@ -29,10 +33,9 @@ function updateDisplay(elem) {
   elem.innerHTML = item.list[randIdx];
 
   let randTime = generateRandTime(long);
-  
-  
-
-  setTimeout(updateDisplay, randTime, elem);
+  if (displayOn) {
+    setTimeout(updateDisplay, randTime, elem);
+  }
 }
 
 function generateRandTime(long) {
