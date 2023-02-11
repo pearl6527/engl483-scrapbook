@@ -10,7 +10,7 @@ p {
   user-select: none;
 }
 div#poemText {
-  padding: 2em;
+  padding: 1em 2em;
 }
 
 ::selection {
