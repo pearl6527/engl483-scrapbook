@@ -20,11 +20,13 @@ function updateDisplay(elem) {
   const indices = elem.id.split("-");
   const item = CORR[indices[0]][indices[1]][indices[2]];
   // console.log(item);
-  // if (elem.innerHTML === item.word && Math.random() < 0.5) {
-  //   setTimeout(updateDisplay, generateRandTime(true), elem);
-  //   return;
-  // }
-
+  if (elem.innerHTML === item.word && Math.random() < 0.75) {
+    setTimeout(updateDisplay, generateRandTime(Math.random() < 0.5 ? true : false), elem);
+    return;
+  }
+  if (elem.innerHTML === item.word && !displayOn) {
+    return;
+  }
   let randIdx = Math.floor(Math.random() * item.list.length);
   let long = false;
   if (item.list[randIdx] === item.word) {
