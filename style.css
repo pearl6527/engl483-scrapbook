@@ -5,8 +5,12 @@
 
 p {
   font-family: 'Times New Roman', Times, serif;
-  line-height: 17pt;
+  font-size: 1em;
+  line-height: 1.3em;
   user-select: none;
+}
+div#poemText {
+  padding: 2em;
 }
 
 ::selection {
@@ -32,5 +36,12 @@ p {
   cursor: pointer;
   font-size: 13pt;
   font-family: 'Courier New', Courier, monospace;
+}
+.button:hover {
+  background-color: #444444;
+}
+.button:disabled {
+  background-color: #aaaaaa;
+  cursor: default;
 }
 

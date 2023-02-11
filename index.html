@@ -12,13 +12,27 @@
     <script type="text/javascript">
       function startButton() {
         const b = document.getElementById("startButton");
-        b.innerHTML = b.innerHTML === "start" ? "stop" : "start";
-        displayOn = !displayOn;
-        if (displayOn) {
-          startDisplay();
-        } else {
-          setTimeout(() => {document.title = "Poem Torn Apart";}, 4000);
+        var buttonText = "";
+        switch (b.innerHTML) {
+          case "start":
+            buttonText = "stop";
+            displayOn = !displayOn;
+            startDisplay();
+            break;
+          case "stop":
+            buttonText = "reset";
+            displayOn = !displayOn;
+            setTimeout(() => {document.title = "Poem Torn Apart";}, 4000);
+            document.getElementById("startButton").disabled = true;
+            setTimeout(() => document.getElementById("startButton").disabled = false, 4000);
+            break;
+          case "reset":
+            buttonText = "start";
+            resetDisplay();
+            break;
         }
+        b.innerHTML = buttonText;
+        
       }
     </script>
     <button class="button" onclick="startButton()" id="startButton">start</button>

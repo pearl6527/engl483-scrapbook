@@ -5,6 +5,7 @@ const max1 = 0.5;
 const min1 = 0.01;
 
 var displayOn = false;
+var timeouts = [];
 
 function startDisplay() {
   let boxes = document.getElementsByClassName("box");
@@ -12,6 +13,7 @@ function startDisplay() {
     updateDisplay(box);
   }
   updateTitle();
+  // clearTimeouts();
 }
 function updateDisplay(elem) {
 
@@ -35,9 +37,28 @@ function updateDisplay(elem) {
 
   let randTime = generateRandTime(long);
   if (displayOn) {
-    setTimeout(updateDisplay, randTime, elem);
+    var timeout = setTimeout(updateDisplay, randTime, elem);
+    // timeouts.push(timeout);
   }
 }
+function resetDisplay() {
+  let boxes = document.getElementsByClassName("box");
+  for (const box of boxes) {
+    const indices = box.id.split("-");
+    const item = CORR[indices[0]][indices[1]][indices[2]];
+    box.classList.add("redacted");
+    box.innerHTML = item.word;
+  }
+}
+// function clearTimeouts() {
+//   var newTimeouts = [];
+//   const n = timeouts.length;
+//   for (let i = Math.floor(n / 2); i < n; i++) {
+//     newTimeouts.push(timeouts[i]);
+//   }
+//   timeouts = newTimeouts;
+//   setTimeout(clearTimeouts, 4000);
+// }
 
 function updateTitle() {
   let newTitle = "";
