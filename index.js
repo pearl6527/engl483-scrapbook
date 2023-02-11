@@ -7,6 +7,26 @@ const min1 = 0.01;
 var displayOn = false;
 var timeouts = [];
 
+window.onload = setupHover;
+
+function setupHover() {
+  let boxes = document.getElementsByClassName("box");
+  for (const box of boxes) {
+    box.addEventListener("mouseover", (e) => {
+      const indices = box.id.split("-");
+      const item = CORR[indices[0]][indices[1]][indices[2]];
+      let randIdx = Math.floor(Math.random() * item.list.length);
+      if (item.list[randIdx] === item.word) {
+        box.classList.add("redacted");
+        long = true;
+      } else {
+        box.classList.remove("redacted");
+      }
+      box.innerHTML = item.list[randIdx];
+    })
+  }
+}
+
 function startDisplay() {
   let boxes = document.getElementsByClassName("box");
   for (const box of boxes) {
