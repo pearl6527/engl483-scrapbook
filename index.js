@@ -11,18 +11,24 @@ window.onload = setupHover;
 
 function setupHover() {
   let boxes = document.getElementsByClassName("box");
-  for (const box of boxes) {
-    box.addEventListener("mouseover", (e) => {
-      const indices = box.id.split("-");
+  for (const elem of boxes) {
+    elem.addEventListener("mouseover", (e) => {
+      const indices = elem.id.split("-");
       const item = CORR[indices[0]][indices[1]][indices[2]];
       let randIdx = Math.floor(Math.random() * item.list.length);
       if (item.list[randIdx] === item.word) {
-        box.classList.add("redacted");
-        long = true;
+        if (Math.random() < 0.3) {
+          elem.classList.add("white");
+        } else {
+          elem.classList.add("redacted");
+          elem.classList.remove("white");
+          long = true;
+        }
       } else {
-        box.classList.remove("redacted");
+        elem.classList.remove("redacted");
+        elem.classList.remove("white");
       }
-      box.innerHTML = item.list[randIdx];
+      elem.innerHTML = item.list[randIdx];
     })
   }
 }
@@ -33,7 +39,6 @@ function startDisplay() {
     updateDisplay(box);
   }
   updateTitle();
-  // clearTimeouts();
 }
 function updateDisplay(elem) {
 
@@ -65,8 +70,7 @@ function updateDisplay(elem) {
 
   let randTime = generateRandTime(long);
   if (displayOn) {
-    var timeout = setTimeout(updateDisplay, randTime, elem);
-    // timeouts.push(timeout);
+    setTimeout(updateDisplay, randTime, elem);
   }
 }
 function resetDisplay() {
@@ -75,6 +79,7 @@ function resetDisplay() {
     const indices = box.id.split("-");
     const item = CORR[indices[0]][indices[1]][indices[2]];
     box.classList.add("redacted");
+    box.classList.remove("white");
     box.innerHTML = item.word;
   }
 }
