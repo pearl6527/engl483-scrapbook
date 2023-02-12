@@ -17,7 +17,7 @@ X1 = {
 };
 X2 = {
   word: "",
-  list: ["☐", "☐", "██", "", "???", "的", "'s", "", "", ""],
+  list: ["☐", "☐", "██", "", "???", "的", "&rsquo;s", "", "", ""],
 };
 SOUND = {
   word: "sound",
@@ -124,7 +124,7 @@ CORR = {
     5: [
       {
         word: "its",
-        list: ["☐", "☐", "███", "��", "???", "[<span class='white'>its</span>]", "的", "'s", "its", "its", "its"],
+        list: ["☐", "☐", "███", "��", "???", "[<span class='white'>its</span>]", "的", "&rsquo;s", "its", "its", "its"],
       },
       {
         word: "wide",
@@ -171,7 +171,7 @@ CORR = {
   },
   3: {
     1: [SUNSET],
-    2: [ONLY],
+    2: [ONLY, X2],
     3: [HAVE, COVERED],
     4: [RAIN, BEATS, DOWN]
   }
