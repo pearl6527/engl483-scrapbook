@@ -71,9 +71,9 @@ RAIN = {
   word: "rain",
   list: ["☐", "☐", "███", "��", "???", "[<span class='white'>rain</span>]", "雨", "rain", "rain", "rain"],
 };
-BEATING = {
-  word: "beating",
-  list: ["☐☐", "☐☐", "█████", "����", "??????", "[<span class='white'>beating</span>]", "敲打", "beating", "beating", "beating"],
+BEATS = {
+  word: "beats",
+  list: ["☐☐", "☐☐", "█████", "����", "??????", "[<span class='white'>beats</span>]", "敲打", "beats", "beats", "beats", "beating"],
 };
 DOWN = {
   word: "down",
@@ -116,7 +116,7 @@ CORR = {
       ONLY, X2, SOUND, REMAINING
     ],
     3: [HAVE, COVERED, THEIR, EYES],
-    4: [RAIN, BEATING, DOWN, NOT, YET, HERE],
+    4: [RAIN, BEATS, DOWN, NOT, YET, HERE],
     5: [
       {
         word: "its",
@@ -169,7 +169,7 @@ CORR = {
     1: [SUNSET],
     2: [ONLY],
     3: [HAVE, COVERED],
-    4: [RAIN, BEATING, DOWN]
+    4: [RAIN, BEATS, DOWN]
   }
 };
 
