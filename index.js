@@ -5,6 +5,7 @@ const max1 = 0.5;
 const min1 = 0.01;
 
 var displayOn = false;
+var changed = false;
 var timeouts = [];
 
 window.onload = setupHover;
@@ -15,6 +16,9 @@ function setupHover() {
   for (const elem of boxes) {
     elem.addEventListener("mouseover", (e) => {
       setNewItem(elem);
+      if (!displayOn && changed) {
+        document.getElementById("startButton").innerHTML = "reset";
+      }
     })
   }
 }
@@ -29,6 +33,7 @@ function setNewItem(elem) {
     if (Math.random() < 0.3) {
       elem.classList.add("white");
       elem.classList.remove("redacted");
+      changed = true;
     } else {
       elem.classList.add("redacted");
       elem.classList.remove("white");
@@ -38,6 +43,7 @@ function setNewItem(elem) {
   } else {
     elem.classList.remove("redacted");
     elem.classList.remove("white");
+    changed = true;
   }
   elem.innerHTML = item.list[randIdx];
   return long;
@@ -82,6 +88,7 @@ function resetDisplay() {
     box.classList.remove("white");
     box.innerHTML = item.word;
   }
+  changed = false;
 }
 
 // set changing title
