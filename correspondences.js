@@ -79,6 +79,10 @@ DOWN = {
   word: "down",
   list: ["", "███", "", "down", "[<span class='white'>down</span>]", "down", "down", "down"],
 };
+THE = {
+  word: "the",
+  list: ["", "██", "", "[<span class='white'>the</span>]", "[ ]", "the", "the", "the"],
+};
 
 CORR = {
   title: [
@@ -97,11 +101,7 @@ CORR = {
   ],
   1: {
     1: [
-      {
-        word: "the",
-        list: ["", "██", "", "[<span class='white'>the</span>]", "[ ]", "the", "the", "the"],
-      },
-      SUNSET,
+      THE, SUNSET,
       {
         word: "",
         list: ["☐", "☐", "██", "��", "???", "帶", "bring", "", "", ""],
@@ -156,6 +156,7 @@ CORR = {
       THEIR, EYES
     ],
     4: [
+      THE,
       {
         word: "wind",
         list: ["☐", "☐", "███", "��", "???", "[<span class='white'>wind</span>]", "風", "wind", "wind", "wind"]
