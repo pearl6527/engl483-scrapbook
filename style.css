@@ -61,6 +61,13 @@ div#poemText {
   cursor: default;
 }
 html {
-  font-size: 100%;
+  /* font-size: 100%; */
+  /* font-size: max(calc(16px - 0.5vw), 11px); */
+  font-size: calc(11px + (16 - 11) * ((100vw - 100px) / (450 - 100)));
+}
+@media only screen and (min-width: 450px) {
+  html {
+    font-size: 100%;
+  }
 }
 
