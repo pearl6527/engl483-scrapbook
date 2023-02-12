@@ -8,21 +8,23 @@
 }
 #poemTitle {
   margin-bottom: 0;
+  font-size: 1.2rem;
 }
 #authorInfo {
   margin-top: 0;
   font-style: italic;
   font-weight: normal;
+  font-size: 0.83rem;
 }
 
 p {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1em;
-  line-height: 1.35em;
+  font-size: 1rem;
+  line-height: 1.35rem;
   user-select: none;
 }
 div#poemText {
-  padding: 1em 2em;
+  padding: 1rem 2rem;
 }
 
 ::selection {
@@ -55,5 +57,8 @@ div#poemText {
 .button:disabled {
   background-color: #aaaaaa;
   cursor: default;
+}
+html {
+  font-size: 100%;
 }
 
