@@ -76,15 +76,6 @@ function resetDisplay() {
     box.innerHTML = item.word;
   }
 }
-// function clearTimeouts() {
-//   var newTimeouts = [];
-//   const n = timeouts.length;
-//   for (let i = Math.floor(n / 2); i < n; i++) {
-//     newTimeouts.push(timeouts[i]);
-//   }
-//   timeouts = newTimeouts;
-//   setTimeout(clearTimeouts, 4000);
-// }
 
 function updateTitle() {
   let newTitle = "";
@@ -92,6 +83,11 @@ function updateTitle() {
   for (const item of items) {
     let randIdx = Math.floor(Math.random() * item.list.length);
     newTitle += item.list[randIdx] + " ";
+  }
+  if (Math.random() < 0.4) {
+    list = CORR["title"][CORR["title"].length - 1].list;
+    let randIdx = Math.floor(Math.random() * list.length);
+    newTitle = list[randIdx] + " " + newTitle;
   }
   document.title = newTitle;
   // document.getElementById("poemTitle").innerHTML = newTitle;
