@@ -13,27 +13,33 @@ function setupHover() {
   let boxes = document.getElementsByClassName("box");
   for (const elem of boxes) {
     elem.addEventListener("mouseover", (e) => {
-      const indices = elem.id.split("-");
-      const item = CORR[indices[0]][indices[1]][indices[2]];
-      let randIdx = Math.floor(Math.random() * item.list.length);
-      if (item.list[randIdx] === item.word) {
-        if (Math.random() < 0.3) {
-          elem.classList.add("white");
-          elem.classList.remove("redacted");
-        } else {
-          elem.classList.add("redacted");
-          elem.classList.remove("white");
-          long = true;
-        }
-      } else {
-        elem.classList.remove("redacted");
-        elem.classList.remove("white");
-      }
-      elem.innerHTML = item.list[randIdx];
+      setNewItem(elem);
     })
   }
 }
 
+function setNewItem(elem) {
+  const indices = elem.id.split("-");
+  const item = CORR[indices[0]][indices[1]][indices[2]];
+  let randIdx = Math.floor(Math.random() * item.list.length);
+  let long = false;
+  if (item.list[randIdx] === item.word) {
+    if (Math.random() < 0.3) {
+      elem.classList.add("white");
+      elem.classList.remove("redacted");
+    } else {
+      elem.classList.add("redacted");
+      elem.classList.remove("white");
+      // long = true;
+    }
+    long = true;
+  } else {
+    elem.classList.remove("redacted");
+    elem.classList.remove("white");
+  }
+  elem.innerHTML = item.list[randIdx];
+  return long;
+}
 function startDisplay() {
   let boxes = document.getElementsByClassName("box");
   for (const box of boxes) {
@@ -53,22 +59,7 @@ function updateDisplay(elem) {
   if (elem.innerHTML === item.word && !displayOn) {
     return;
   }
-  let randIdx = Math.floor(Math.random() * item.list.length);
-  let long = false;
-  if (item.list[randIdx] === item.word) {
-    if (Math.random() < 0.3) {
-      elem.classList.add("white");
-      elem.classList.remove("redacted");
-    } else {
-      elem.classList.add("redacted");
-      elem.classList.remove("white");
-      long = true;
-    }
-  } else {
-    elem.classList.remove("redacted");
-    elem.classList.remove("white");
-  }
-  elem.innerHTML = item.list[randIdx];
+  let long = setNewItem(elem);
 
   let randTime = generateRandTime(long);
   if (displayOn) {
