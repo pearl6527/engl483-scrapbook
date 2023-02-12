@@ -19,6 +19,7 @@ function setupHover() {
       if (item.list[randIdx] === item.word) {
         if (Math.random() < 0.3) {
           elem.classList.add("white");
+          elem.classList.remove("redacted");
         } else {
           elem.classList.add("redacted");
           elem.classList.remove("white");
@@ -57,6 +58,7 @@ function updateDisplay(elem) {
   if (item.list[randIdx] === item.word) {
     if (Math.random() < 0.3) {
       elem.classList.add("white");
+      elem.classList.remove("redacted");
     } else {
       elem.classList.add("redacted");
       elem.classList.remove("white");
