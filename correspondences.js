@@ -1,4 +1,6 @@
 // , "<em>kuāng</em>"
+
+// reusable elements
 UP = {
   word: "up",
   list: ["☐", "☐", "██", "��", "???", "[<span class='white'>up</span>]", "上", "up", "up", "up"],

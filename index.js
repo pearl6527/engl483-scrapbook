@@ -9,6 +9,7 @@ var timeouts = [];
 
 window.onload = setupHover;
 
+// set up change-on-hover for each "box" element
 function setupHover() {
   let boxes = document.getElementsByClassName("box");
   for (const elem of boxes) {
@@ -18,6 +19,7 @@ function setupHover() {
   }
 }
 
+// select and set representation of a given "box" element
 function setNewItem(elem) {
   const indices = elem.id.split("-");
   const item = CORR[indices[0]][indices[1]][indices[2]];
@@ -40,6 +42,8 @@ function setNewItem(elem) {
   elem.innerHTML = item.list[randIdx];
   return long;
 }
+
+// begin random display
 function startDisplay() {
   let boxes = document.getElementsByClassName("box");
   for (const box of boxes) {
@@ -47,8 +51,9 @@ function startDisplay() {
   }
   updateTitle();
 }
-function updateDisplay(elem) {
 
+// update given "box" element
+function updateDisplay(elem) {
   const indices = elem.id.split("-");
   const item = CORR[indices[0]][indices[1]][indices[2]];
   // console.log(item);
@@ -66,6 +71,8 @@ function updateDisplay(elem) {
     setTimeout(updateDisplay, randTime, elem);
   }
 }
+
+// reset all "box" elements to default representation
 function resetDisplay() {
   let boxes = document.getElementsByClassName("box");
   for (const box of boxes) {
@@ -77,6 +84,7 @@ function resetDisplay() {
   }
 }
 
+// set changing title
 function updateTitle() {
   let newTitle = "";
   const items = CORR["title"];
@@ -96,6 +104,7 @@ function updateTitle() {
   }
 }
 
+// generate random time (ms)
 function generateRandTime(long) {
   if (long) {
     return (Math.random() * (max - min) + min) * 1000;
