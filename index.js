@@ -1,4 +1,4 @@
-const max = 4;
+const max = 4.5;
 const min = 2.5;
 
 const max1 = 0.5;
@@ -40,7 +40,7 @@ function updateDisplay(elem) {
   const indices = elem.id.split("-");
   const item = CORR[indices[0]][indices[1]][indices[2]];
   // console.log(item);
-  if (elem.innerHTML === item.word && Math.random() < 0.75) {
+  if (elem.innerHTML === item.word && elem.classList.contains("redacted") && Math.random() < 0.7) {
     setTimeout(updateDisplay, generateRandTime(Math.random() < 0.5 ? true : false), elem);
     return;
   }
@@ -50,10 +50,16 @@ function updateDisplay(elem) {
   let randIdx = Math.floor(Math.random() * item.list.length);
   let long = false;
   if (item.list[randIdx] === item.word) {
-    elem.classList.add("redacted");
-    long = true;
+    if (Math.random() < 0.3) {
+      elem.classList.add("white");
+    } else {
+      elem.classList.add("redacted");
+      elem.classList.remove("white");
+      long = true;
+    }
   } else {
     elem.classList.remove("redacted");
+    elem.classList.remove("white");
   }
   elem.innerHTML = item.list[randIdx];
 

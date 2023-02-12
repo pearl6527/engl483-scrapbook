@@ -22,9 +22,9 @@
           case "stop":
             buttonText = "reset";
             displayOn = !displayOn;
-            setTimeout(() => {document.title = "Poem Torn Apart";}, 4000);
+            setTimeout(() => {document.title = "Poem Torn Apart";}, max * 1000);
             document.getElementById("startButton").disabled = true;
-            setTimeout(() => document.getElementById("startButton").disabled = false, 4000);
+            setTimeout(() => document.getElementById("startButton").disabled = false, max * 1000);
             break;
           case "reset":
             buttonText = "start";
@@ -39,6 +39,7 @@
     <div id="poemText">
       <h4 id="poemTitle">Poem Torn Apart</h4>
       <p>
+        <!-- line 1 -->
         the night sky took 
         <span id="1-1-0" class="box redacted">the</span> 
         <span id="1-1-1" class="box redacted">sunset</span> 
@@ -47,17 +48,20 @@
         <span id="1-1-4" class="box redacted">into</span> 
         <span id="1-1-5" class="box redacted">bed</span> 
         <span id="1-1-6" class="box"></span> <br/>
+        <!-- line 2 -->
         black is this instant 
         <span id="1-2-0" class="box redacted">the</span> 
         <span id="1-2-1" class="box redacted">only</span> 
         <span id="1-2-2" class="box"></span>
         <span id="1-2-3" class="box redacted">sound</span> 
         <span id="1-2-4" class="box redacted">remaining</span> <br/>
+        <!-- line 3 -->
         the stars too 
         <span id="1-3-0" class="box redacted">have</span> 
         <span id="1-3-1" class="box redacted">covered</span> 
         <span id="1-3-2" class="box redacted">their</span> 
         <span id="1-3-3" class="box redacted">eyes</span> <br/>
+        <!-- line 4 -->
         left to the wind 
         <span id="1-4-0" class="box redacted">rain</span> 
         <span id="1-4-1" class="box redacted">beating</span> 
@@ -65,55 +69,59 @@
         <span id="1-4-3" class="box redacted">not</span> 
         <span id="1-4-4" class="box redacted">yet</span> 
         <span id="1-4-5" class="box redacted">here</span> <br/>
+        <!-- line 5 -->
         daybreak 
         <span id="1-5-0" class="box redacted">its</span> 
         <span id="1-5-1" class="box redacted">wide</span> 
         <span id="1-5-2" class="box redacted">gates</span> <br/>
       </p>
       <p>
+        <!-- line 1 -->
         <span id="2-1-0" class="box redacted">took</span> 
         the sunset 
         <span id="2-1-1" class="box redacted">up</span> 
         <span id="2-1-2" class="box redacted">into</span> 
         <span id="2-1-3" class="box redacted">bed</span> 
         <span id="2-1-4" class="box"></span> <br/>
-
+        <!-- line 2 -->
         <span id="2-2-0" class="box redacted">this</span> 
         <span id="2-2-1" class="box redacted">instant</span> 
         the only 
         <span id="2-2-2" class="box"></span>
         <span id="2-2-3" class="box redacted">sound</span> 
         <span id="2-2-4" class="box redacted">remaining</span> <br/>
-
+        <!-- line 3 -->
         <span id="2-3-0" class="box redacted">too</span> 
         have covered 
         <span id="2-3-1" class="box redacted">their</span>
         <span id="2-3-2" class="box redacted">eyes</span> <br/>
-
+        <!-- line 4 -->
         <span id="2-4-0" class="box redacted">wind</span> 
         rain beating down 
         <span id="2-4-1" class="box redacted">not</span>
         <span id="2-4-2" class="box redacted">yet</span>
         <span id="2-4-3" class="box redacted">here</span> <br/>
-
+        <!-- line 5 -->
         its wide 
         <span id="2-5-0" class="box redacted">gates</span> <br/>
       </p>
       <p>
+        <!-- line 1 -->
         <span id="3-1-0" class="box redacted">sunset</span> 
         up into bed <br/>
-
+        <!-- line 2 -->
         <span id="3-2-0" class="box redacted">only</span> 
         sound remaining <br/>
-
+        <!-- line 3 -->
         <span id="3-3-0" class="box redacted">have</span> 
         <span id="3-3-1" class="box redacted">covered</span> 
         their eyes <br/>
-
+        <!-- line 4 -->
         <span id="3-4-0" class="box redacted">rain</span> 
         <span id="3-4-1" class="box redacted">beating</span> 
         <span id="3-4-2" class="box redacted">down</span> 
         not yet here <br/>
+        <!-- line 5 -->
         gates <br/>
       </p>
     </div>

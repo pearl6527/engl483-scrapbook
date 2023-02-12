@@ -2,6 +2,10 @@
   color: #b7b7b7;
   background-color: #b7b7b7;
 }
+.white {
+  color: white;
+  background-color: white;
+}
 
 p {
   font-family: 'Times New Roman', Times, serif;

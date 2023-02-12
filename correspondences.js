@@ -1,82 +1,83 @@
+// , "<em>kuāng</em>"
 UP = {
   word: "up",
-  list: ["☐", "██", "��", "???", "  ", "上", "up", "up", "up"],
+  list: ["☐", "☐", "██", "��", "???", "[<span class='white'>up</span>]", "上", "up", "up", "up"],
 };
 INTO = {
   word: "into",
-  list: ["", "███", "   ", "", "上", "into", "into", "into"],
+  list: ["", "███", "[<span class='white'>into</span>]", "", "上", "進", "into", "into", "into"],
 };
 BED = {
   word: "bed",
-  list: ["☐", "██", "��", "???", "   ", "床", "bed", "bed", "bed"],
+  list: ["☐", "☐", "██", "��", "???", "[<span class='white'>bed</span>]", "床", "bed", "bed", "bed"],
 };
 X1 = {
   word: "",
-  list: ["☐", "██", "��", "???", "了", "", "", ""],
+  list: ["☐", "☐", "██", "��", "???", "了", "", "", ""],
 };
 X2 = {
   word: "",
-  list: ["☐", "██", "", "???", "的", "'s", "", "", ""],
+  list: ["☐", "☐", "██", "", "???", "的", "'s", "", "", ""],
 };
 SOUND = {
   word: "sound",
-  list: ["☐☐", "████", "����", "??????", "    ", "聲音", "sound", "sound", "sound"],
+  list: ["☐☐", "☐☐", "████", "����", "??????", "[<span class='white'>sound</span>]", "聲音", "sound", "sound", "sound"],
 };
 REMAINING = {
   word: "remaining",
-  list: ["", "█████", "����", "??????", "      ", "", "remaining", "remaining", "remaining"],
+  list: ["", "█████", "����", "??????", "[<span class='white'>remaining</span>]", "", "remaining", "remaining", "remaining"],
 };
 THEIR = {
   word: "their",
-  list: ["", "███", "   ", "", "their", "their", "their"],
+  list: ["", "███", "[<span class='white'>their</span>]", "", "their", "their", "their"],
 };
 EYES = {
   word: "eyes",
-  list: ["☐☐", "██", "����", "??????", "   ", "眼睛", "eyes", "eyes", "eyes"],
+  list: ["☐☐", "☐☐", "██", "����", "??????", "[<span class='white'>eyes</span>]", "眼睛", "eyes", "eyes", "eyes"],
 };
 NOT = {
   word: "not",
-  list: ["☐", "██", "��", "???", "  ", "未", "尚", "not", "not", "not"],
+  list: ["☐", "☐", "██", "��", "???", "[<span class='white'>not</span>]", "未", "尚", "not", "not", "not"],
 };
 YET = {
   word: "yet",
-  list: ["☐", "██", "��", "???", "  ", "未", "尚", "yet", "yet", "yet"],
+  list: ["☐", "☐", "██", "��", "???", "[<span class='white'>yet</span>]", "未", "尚", "yet", "yet", "yet"],
 };
 HERE = {
   word: "here",
-  list: ["☐☐", "███", "����", "??????", "  ", "到來", "arrived", "here", "here", "here"],
+  list: ["☐☐", "☐☐", "███", "����", "??????", "[<span class='white'>here</span>]", "到來", "arrived", "here", "here", "here"],
 };
 GATES = {
   word: "gates",
-  list: ["☐", "████", "��", "???", "    ", "門", "door", "doors", "gates", "gates", "gates"],
+  list: ["☐", "☐", "████", "��", "???", "[<span class='white'>gates</span>]", "門", "door", "doors", "gates", "gates", "gates"],
 };
 SUNSET = {
   word: "sunset",
-  list: ["☐☐", "████", "����", "??????", "      ", "夕陽", "sunset", "sunset", "sunset"],
+  list: ["☐☐", "☐☐", "████", "����", "??????", "[<span class='white'>sunset</span>]", "夕陽", "sunset", "sunset", "sunset"],
 };
 ONLY = {
   word: "only",
-  list: ["☐☐", "██", "����", "??????", "   ", "唯一", "one", "only", "only", "only"],
+  list: ["☐☐", "☐☐", "██", "����", "??????", "[<span class='white'>only</span>]", "唯一", "one", "only", "only", "only"],
 };
 HAVE = {
   word: "have",
-  list: ["☐", "███", "��", "???", "   ", "了", " ", "have", ""],
+  list: ["☐", "☐", "███", "��", "???", "[<span class='white'>have</span>]", "了", "[ ]", "have", "have", "have", ""],
 };
 COVERED = {
   word: "covered",
-  list: ["☐☐", "████", "����", "??????", "     ", "遮住", "covering", "covered"],
+  list: ["☐☐", "☐☐", "████", "����", "??????", "[<span class='white'>covered</span>]", "遮住", "covering", "covered", "covered", "covered"],
 };
 RAIN = {
   word: "rain",
-  list: ["☐", "███", "��", "???", "   ", "雨", "rain", "rain", "rain"],
+  list: ["☐", "☐", "███", "��", "???", "[<span class='white'>rain</span>]", "雨", "rain", "rain", "rain"],
 };
 BEATING = {
   word: "beating",
-  list: ["☐☐", "█████", "����", "??????", "      ", "敲打", "beating", "beating", "beating"],
+  list: ["☐☐", "☐☐", "█████", "����", "??????", "[<span class='white'>beating</span>]", "敲打", "beating", "beating", "beating"],
 };
 DOWN = {
   word: "down",
-  list: ["", "███", "", "down", "  ", "down", "down", "down"],
+  list: ["", "███", "", "down", "[<span class='white'>down</span>]", "down", "down", "down"],
 };
 
 CORR = {
@@ -98,19 +99,19 @@ CORR = {
     1: [
       {
         word: "the",
-        list: ["", "██", "", "   ", " ", "the", "the", "the"],
+        list: ["", "██", "", "[<span class='white'>the</span>]", "[ ]", "the", "the", "the"],
       },
       SUNSET,
       {
         word: "",
-        list: ["☐", "██", "��", "???", "帶", "bring"],
+        list: ["☐", "☐", "██", "��", "???", "帶", "bring", "", "", ""],
       },
       UP, INTO, BED, X1
     ],
     2: [
       {
         word: "the",
-        list: ["", "██", "", "   ", "", "the", "the", "the"],
+        list: ["", "██", "", "[<span class='white'>the</span>]", "", "the", "the", "the"],
       },
       ONLY, X2, SOUND, REMAINING
     ],
@@ -119,11 +120,11 @@ CORR = {
     5: [
       {
         word: "its",
-        list: ["☐", "███", "��", "???", "   ", "的", "'s", "its", "its", "its"],
+        list: ["☐", "☐", "███", "��", "???", "[<span class='white'>its</span>]", "的", "'s", "its", "its", "its"],
       },
       {
         word: "wide",
-        list: ["☐", "███", "��", "???", "   ", "大", "big", "wide", "wide", "wide"],
+        list: ["☐", "☐", "███", "��", "???", "[<span class='white'>wide</span>]", "大", "big", "wide", "wide", "wide"],
       },
       GATES
     ],
@@ -132,32 +133,32 @@ CORR = {
     1: [
       {
         word: "took",
-        list: ["☐", "███", "��", "???", "   ", "把", "took", "took", "took"]
+        list: ["☐", "☐", "███", "��", "???", "[<span class='white'>took</span>]", "把", "took", "took", "took"]
       },
       UP, INTO, BED, X1
     ],
     2: [
       {
         word: "this",
-        list: ["☐", "███", "��", "???", "   ", "此", "this", "this", "this"]
+        list: ["☐", "☐", "███", "��", "???", "[<span class='white'>this</span>]", "此", "this", "this", "this"]
       },
       {
         word: "instant",
-        list: ["☐", "█████", "����", "???", "   ", "際", "instant", "instant", "instant"]
+        list: ["☐", "☐", "█████", "����", "???", "[<span class='white'>instant</span>]", "際", "instant", "instant", "instant"]
       },
       X2, SOUND, REMAINING
     ],
     3: [
       {
         word: "too",
-        list: ["☐", "██", "��", "???", "   ", "也", "too", "too", "too"]
+        list: ["☐", "☐", "██", "��", "???", "[<span class='white'>too</span>]", "也", "too", "too", "too"]
       },
       THEIR, EYES
     ],
     4: [
       {
         word: "wind",
-        list: ["☐", "███", "��", "???", "   ", "風", "wind", "wind", "wind"]
+        list: ["☐", "☐", "███", "��", "???", "[<span class='white'>wind</span>]", "風", "wind", "wind", "wind"]
       },
       NOT, YET, HERE
     ],
