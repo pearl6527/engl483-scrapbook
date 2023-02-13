@@ -9,7 +9,7 @@
 .bigBox {
   font-size: 1.75rem;
   line-height: 0;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.03rem;
 }
 #poemTitle {
   font-family: Arial, Helvetica, sans-serif;
@@ -29,6 +29,7 @@ p {
   font-size: 1rem;
   line-height: 1.4rem;
   user-select: none;
+  white-space: nowrap;
 }
 
 ::selection {
