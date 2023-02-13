@@ -63,10 +63,10 @@ p {
   cursor: default;
 }
 div#poemText {
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
 }
 html {
-  font-size: calc(11px + (16 - 11) * ((100vw - 250px) / (450 - 250)));
+  font-size: calc(11px + (16 - 11) * ((100vw - 300px) / (450 - 300)));
 }
 @media only screen and (min-width: 450px) {
   html {
@@ -76,13 +76,13 @@ html {
     padding: 1rem 2rem;
   }
 }
-@media only screen and (max-width: 250px) {
+@media only screen and (max-width: 300px) {
   html {
     font-size: 11px;
   }
-  .bigBox {
+  /* .bigBox {
     font-size: 1.50rem;
-  }
+  } */
 }
 
 
