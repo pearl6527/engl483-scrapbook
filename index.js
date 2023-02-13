@@ -106,7 +106,7 @@ function updateTitle() {
     newTitle += item.list[randIdx] + " ";
   }
   if (Math.random() < 0.4) {
-    list = CORR["title"][CORR["title"].length - 1].list;
+    list = CORR["classifier"].list;
     let randIdx = Math.floor(Math.random() * list.length);
     newTitle = list[randIdx] + " " + newTitle;
   }

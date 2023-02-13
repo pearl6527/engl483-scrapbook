@@ -99,12 +99,12 @@ CORR = {
     {
       word: "Apart",
       list: ["Apart", "Apart", "Apart", "apart", "?????", "��", "裂的"],
-    },
-    {
-      word: "A",
-      list: ["A", "A", "A", "a", "?????", "��", "一首"],
     }
   ],
+  classifier: {
+      word: "A",
+      list: ["A", "A", "A", "a", "?????", "��", "一首"],
+  },
   1: {
     1: [
       THE, SUNSET,
