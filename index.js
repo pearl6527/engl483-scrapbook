@@ -8,10 +8,10 @@ var displayOn = false;
 var changed = false;
 var timeouts = [];
 
-window.onload = setupHover;
+window.onload = setupHoverClick;
 
 // set up change-on-hover for each "box" element
-function setupHover() {
+function setupHoverClick() {
   let boxes = document.getElementsByClassName("box");
   for (const elem of boxes) {
     elem.addEventListener("mouseover", (e) => {
@@ -19,7 +19,13 @@ function setupHover() {
       if (!displayOn && changed) {
         document.getElementById("startButton").innerHTML = "reset";
       }
-    })
+    });
+    elem.addEventListener("click", (e) => {
+      setNewItem(elem);
+      if (!displayOn && changed) {
+        document.getElementById("startButton").innerHTML = "reset";
+      }
+    });
   }
 }
 
