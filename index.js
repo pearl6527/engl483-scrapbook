@@ -63,11 +63,11 @@ function updateDisplay(elem) {
   const indices = elem.id.split("-");
   const item = CORR[indices[0]][indices[1]][indices[2]];
   // console.log(item);
-  if (elem.innerHTML === item.word && elem.classList.contains("redacted") && Math.random() < 0.7) {
-    setTimeout(updateDisplay, generateRandTime(Math.random() < 0.5 ? true : false), elem);
+  if (elem.innerHTML === item.word && !displayOn) {
     return;
   }
-  if (elem.innerHTML === item.word && !displayOn) {
+  if (elem.innerHTML === item.word && elem.classList.contains("redacted") && Math.random() < 0.7) {
+    setTimeout(updateDisplay, generateRandTime(Math.random() < 0.5 ? true : false), elem);
     return;
   }
   let long = setNewItem(elem);

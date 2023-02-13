@@ -9,7 +9,7 @@
 .bigBox {
   font-size: 1.75rem;
   line-height: 0;
-  letter-spacing: -0.03rem;
+  letter-spacing: -0.02rem;
 }
 #poemTitle {
   font-family: Arial, Helvetica, sans-serif;
@@ -49,11 +49,11 @@ p {
   text-align: center;
   text-decoration: none;
   /* display: inline-block; */
-  margin: 4px 2px;
+  margin: 0.15rem 0.2rem;
   width: fit-content;
-  height: 20pt;
+  height: 1.7rem;
   cursor: pointer;
-  font-size: 13pt;
+  font-size: 1.1rem;
   font-family: 'Courier New', Courier, monospace;
 }
 .button:hover {
