@@ -8,6 +8,19 @@ var displayOn = false;
 var changed = false;
 var timeouts = [];
 
+jQuery.fn.magnify = function (str, className) {    
+  var regex = new RegExp(str, "gi");
+
+  return this.each(function () {
+      this.innerHTML = this.innerHTML.replace(
+        regex, 
+        function(matched) {return "<span class=\"" + className + "\">" + matched + "</span>";}
+      );
+  });
+};
+
+// $("p").magnify("Z","bixBox");
+
 window.onload = setupHover;
 
 // set up change-on-hover for each "box" element
